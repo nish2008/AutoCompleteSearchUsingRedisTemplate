@@ -27,8 +27,8 @@ Step 3 : Add Spring Boot dependencies (WEB, Spring Data Redis, Client Redis)
     
 Step 4 : Add redis server configuration to project in spring boot application java file.
 
-@Bean
-	JedisConnectionFactory jedisConnectionFactory() {
+	@Bean
+	public JedisConnectionFactory jedisConnectionFactory() {
 		JedisConnectionFactory jedisConFactory
 				= new JedisConnectionFactory();
 		jedisConFactory.setHostName("localhost");
@@ -48,7 +48,7 @@ Step 4 : Add redis server configuration to project in spring boot application ja
  
 Step 5 :  Create Rest Controller and add two api.
 
- @Autowired
+    @Autowired
     RedisTemplate<String,String> redisTemplate;
 
     @GetMapping("/add_word/{word}")
@@ -77,17 +77,17 @@ Step 5 :  Create Rest Controller and add two api.
    
   Step 6 : To add string in cache 
   
-  http://localhost:8091/api/add_word/ab
-  http://localhost:8091/api/add_word/ab
-  http://localhost:8091/api/add_word/abc
-  http://localhost:8091/api/add_word/abcd
-  http://localhost:8091/api/add_word/abcde
-  http://localhost:8091/api/add_word/abcdef
-  http://localhost:8091/api/add_word/abcdefg
+  	http://localhost:8091/api/add_word/ab
+  	http://localhost:8091/api/add_word/ab
+  	http://localhost:8091/api/add_word/abc
+  	http://localhost:8091/api/add_word/abcd
+  	http://localhost:8091/api/add_word/abcde
+  	http://localhost:8091/api/add_word/abcdef
+  	http://localhost:8091/api/add_word/abcdefg
   
   Step 7 : To get String from cache for AutoComplete Search application
   
-  http://localhost:8091/api/autocomplete/query/abc
+  	http://localhost:8091/api/autocomplete/query/abc
   
   Result would be : ["abc","abcd","abcde","abcdef","abcdefg"]
   
