@@ -1,7 +1,7 @@
 # AutoCompleteSearchUsingRedisTemplate
 Auto Complete Search from cache using RedisTemplate
 
-Step 1 : Download redis-2.4.5-win32-win64.zip
+Step 1 : Download redis-2.4.5-win32-win64.zip from https://redislabs.com/ebook/appendix-a/a-3-installing-on-windows/a-3-2-installing-redis-on-window/
 
 Step 2 : Run redis-server.exe from \redis-2.4.5-win32-win64\64bit
 
